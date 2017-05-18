@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-for i in range(1,20):#先爬取20个页面，数字当然可以改
+for i in range(1,20):#先爬取20个页面，数字可以改
     url='http://www.freebuf.com/www.freebuf.com?action=ajax_wenku&year=all&score=all&type=all&tech=0&keyword=&page='+str(i)
     r=requests.get(url)
     soup= BeautifulSoup(r.text,'lxml')#直接把json数据传递给BeautifulSoup解析

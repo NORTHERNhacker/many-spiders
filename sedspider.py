@@ -1,6 +1,8 @@
 import requests
-from bs4 import BeautifulSoup
+import json
 data={'action':"search",'value':"12"}
 url= 'http://sed.pwndata.com/api/sed/search'
 r=requests.post(url,data=data)
-print(r.text)
+data=json.loads(r.text)
+#print(data)
+i= data['data']['result']['开房数据']

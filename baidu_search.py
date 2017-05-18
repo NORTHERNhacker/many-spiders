@@ -5,6 +5,6 @@ try:
 	r=requests.get("http://www.baidu.com/s",params=kv)
 	print(r.request.url)
 	r.raise_for_status()
-	print(r.text)
+	print(len(r.text))
 except:
 	print("failed")
